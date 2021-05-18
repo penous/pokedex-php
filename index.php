@@ -57,42 +57,53 @@ if (!empty($_GET['pokemon'])) {
                 <p id="health" class="details">
                   <?php
                   if (isset($poke)) {
-                      echo $poke->name;
+                      echo $poke->health;
+                      echo "HP";
                   } ?>
                 </p>
                 <p id="power" class="details">
                   <?php
                   if (isset($poke)) {
                       echo $poke->power;
+                      echo "Attack";
                   } ?>
                 </p>
-                <p id="type" class="details"></p>
-                <?php
+                <p id="type" class="details">
+                  <?php
                   if (isset($poke)) {
-                      echo $poke->power;
-                  } ?>
+                      echo $poke->type;
+                  } ?></p>
               </div>
               <div id="middle-screen-content">
                 <div id="stats">
-                  <div id="name"></div>
-                  <?php
+                  <div id="name">
+                    <?php
                   if (isset($poke)) {
-                      echo $poke->power;
-                  } ?>
-                  <div id="height"></div>
-                  <?php
+                      echo $poke->name;
+                  } ?></div>
+                  <div id="height">
+                    <?php
                   if (isset($poke)) {
-                      echo $poke->power;
-                  } ?>
-                  <div id="weight"></div>
-                  <?php
+                      echo "HT•";
+                      echo $poke->height;
+                  } ?></div>
+                  <div id="weight">
+                    <?php
                   if (isset($poke)) {
-                      echo $poke->power;
-                  } ?>
+                      echo "WT•";
+                      echo $poke->weight;
+                  } ?></div>
                 </div>
-                <div id="image-main"></div>
+                <div id="image-main">
+                  <?php
+                  if (isset($poke)) {
+                      echo "<img src='$poke->sprite' alt='pokemon was here' >";
+                  }
+                ?>
+                </div>
               </div>
-              <div id="evo-chain"></div>
+              <div id="evo-chain">
+              </div>
             </div>
           </div>
           <div id="left-bottom-buttons">

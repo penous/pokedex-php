@@ -11,10 +11,12 @@ function getData()
     $height = $result['height'];
     $weight = $result['weight'];
     $type = $result['types'][0]['type']['name'];
+    $sprite = $result['sprites']['front_default'];
 
-    $poke = new Pokemon($name, $health, $power, $type, $height, $weight, $abilities);
 
-    var_dump($poke);
-    // var_dump($result['abilities']);
+    $poke = new Pokemon($name, $health, $power, $type, $height, $weight, $abilities, $sprite);
+
+    // var_dump($poke);
+    var_dump($result['sprites']['front_default']);
     return $poke;
 }
