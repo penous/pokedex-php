@@ -58,14 +58,14 @@ if (!empty($_GET['pokemon'])) {
                   <?php
                   if (isset($poke)) {
                       echo $poke->health;
-                      echo "HP";
+                      echo " HP";
                   } ?>
                 </p>
                 <p id="power" class="details">
                   <?php
                   if (isset($poke)) {
                       echo $poke->power;
-                      echo "Attack";
+                      echo " Attack";
                   } ?>
                 </p>
                 <p id="type" class="details">
