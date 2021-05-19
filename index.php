@@ -29,10 +29,14 @@ if (!empty($_GET['pokemon'])) {
           <div id="right-screen">
             <div id="right-middle-screen">
               <div id="moves">
-                <template id="tpl-moves">
-                  <li class="move"></li>
-                </template>
-                <ol id="move-target"></ol>
+                <ol id="move-target">
+                  <?php
+                  if (isset($poke)) {
+                      foreach (range(0, 8) as $number) {
+                          echo "<li class='move'>{$poke->abilities[$number]['move']['name']}</li>";
+                      }
+                  } ?>
+                </ol>
               </div>
               <div id="input-field">
                 <form action="index.php" method="get">
