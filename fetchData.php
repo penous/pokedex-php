@@ -49,7 +49,7 @@ function getChainNames($chain)
 function fetchChainUrls($names)
 {
     $urls = [];
-    foreach ($names as $name) {
+    foreach (array_reverse($names) as $name) {
         $data = file_get_contents("https://pokeapi.co/api/v2/pokemon/$name");
         $result = json_decode($data, true);
         $sprite = $result['sprites']['front_default'];
