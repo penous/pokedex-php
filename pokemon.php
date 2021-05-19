@@ -12,8 +12,9 @@ class Pokemon
     public $weight;
     public $sprite;
     public $abilities;
+    public $evoChain;
 
-    public function __construct($name, $health, $power, $type, $height, $weight, $abilities, $sprite)
+    public function __construct($name, $health, $power, $type, $height, $weight, $abilities, $sprite, $evoChain)
     {
         $this->name = $name;
         $this->health = $health;
@@ -23,5 +24,6 @@ class Pokemon
         $this->weight = $weight;
         $this->abilities = $abilities;
         $this->sprite = $sprite;
+        $this->evoChain = $evoChain;
     }
 }
