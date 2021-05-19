@@ -107,6 +107,14 @@ if (!empty($_GET['pokemon'])) {
                 </div>
               </div>
               <div id="evo-chain">
+                <?php
+                  if (isset($poke)) {
+                      foreach ($poke->evoChain as $url) {
+                          echo "<img src='$url' alt='Evolution Chain' >";
+                      }
+                  }
+              
+              ?>
               </div>
             </div>
           </div>
